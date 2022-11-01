@@ -1,7 +1,7 @@
 import anecdoteService from '../services/anecdotes'
 const AnecdoteReducer = (state = [], action) => {
 
-  // eslint-disable-next-line no-console
+  // intentional linting error for github actions to test
   console.log('state now: ', state)
   // eslint-disable-next-line no-console
   console.log('action', action)
