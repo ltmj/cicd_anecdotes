@@ -26,7 +26,7 @@
     "serve_front": "serve -s build",
     "start:prod": "npm-run-all -p -r server serve_front",
     "cypress:open": "cypress open",
-    "test:e2e":"cypress run"
+    "test:e2e": "cypress run"
   },
   "eslintConfig": {
     "extends": [
@@ -53,6 +53,7 @@
   "devDependencies": {
     "cypress": "^10.11.0",
     "npm-run-all": "^4.1.5",
-    "redux-devtools-extension": "^2.13.9"
+    "redux-devtools-extension": "^2.13.9",
+    "serve": "^14.0.1"
   }
 }
