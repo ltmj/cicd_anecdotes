@@ -25,7 +25,8 @@
     "server": "json-server -p3001 --watch db.json",
     "serve_front": "serve -s build",
     "start:prod": "npm-run-all -p -r server serve_front",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "test:e2e":"cypress run"
   },
   "eslintConfig": {
     "extends": [
