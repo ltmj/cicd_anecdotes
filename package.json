@@ -24,7 +24,8 @@
     "eslint": "eslint .",
     "server": "json-server -p3001 --watch db.json",
     "serve_front": "serve -s build",
-    "start:prod": "npm-run-all -p -r server serve_front"
+    "start:prod": "npm-run-all -p -r server serve_front",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "cypress": "^10.11.0",
     "npm-run-all": "^4.1.5",
     "redux-devtools-extension": "^2.13.9"
   }
