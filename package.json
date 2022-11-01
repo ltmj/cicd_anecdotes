@@ -22,7 +22,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "eslint": "eslint .",
-    "server": "json-server -p3001 --watch db.json"
+    "server": "json-server -p3001 --watch db.json",
+    "serve_front": "serve -s build",
+    "start:prod": "npm-run-all -p -r server serve_front"
   },
   "eslintConfig": {
     "extends": [
@@ -30,6 +32,10 @@
       "react-app/jest"
     ]
   },
+  "eslintIgnore": [
+    "node_modules",
+    "build/*"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
@@ -43,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "redux-devtools-extension": "^2.13.9"
   }
 }
