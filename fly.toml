@@ -8,24 +8,23 @@ kill_timeout = 5
   release_command = "npm run build"
 
 [processes]
-  app = "npm run serve_front"
-  db = "npm run server"
+  app = "npm run start:prod"
+  
 
 
 [build]
   builder = "heroku/buildpacks:20"
 
 [env]
-  PORT = "8080"
 
 [experimental]
-  allowed_public_ports = [3001]
+  allowed_public_ports = []
   auto_rollback = true
 
 [[services]]
   http_checks = []
-  internal_port = 3000
-  processes = ["app", "db"]
+  internal_port = 8080
+  processes = ["app"]
   protocol = "tcp"
   script_checks = []
   [services.concurrency]
@@ -37,11 +36,6 @@ kill_timeout = 5
     force_https = true
     handlers = ["http"]
     port = 80
-
-  [[services.ports]]
-    force_https = true
-    handlers = ["http"]
-    port = 3001
 
   [[services.ports]]
     handlers = ["tls", "http"]

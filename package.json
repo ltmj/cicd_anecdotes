@@ -1,6 +1,6 @@
 {
-  "engines" : {
-    "node" : "14.15.0"
+  "engines": {
+    "node": "14.15.0"
   },
   "name": "redux-anecdotes",
   "version": "0.1.0",
@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
     "axios": "^0.24.0",
+    "express": "^4.18.2",
     "json-server": "^0.17.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -17,6 +18,7 @@
     "react-scripts": "4.0.2",
     "redux": "^4.0.5",
     "redux-thunk": "^2.4.0",
+    "serve": "^14.0.1",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
@@ -27,7 +29,7 @@
     "eslint": "eslint .",
     "server": "json-server -p3001 --watch db.json",
     "serve_front": "serve -s build",
-    "start:prod": "npm-run-all -p -r server serve_front",
+    "start:prod": "node app.js",
     "cypress:open": "cypress open",
     "test:e2e": "cypress run"
   },
@@ -54,9 +56,9 @@
     ]
   },
   "devDependencies": {
+    "cors": "^2.8.5",
     "cypress": "^10.11.0",
     "npm-run-all": "^4.1.5",
-    "redux-devtools-extension": "^2.13.9",
-    "serve": "^14.0.1"
+    "redux-devtools-extension": "^2.13.9"
   }
 }
