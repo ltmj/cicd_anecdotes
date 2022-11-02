@@ -34,4 +34,4 @@ jobs:
       - name: deploy app
         if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message, '+'), '#skip') }}
         run: flyctl deploy --remote-only
-      
+#deployment shouldn't happen on pull request
