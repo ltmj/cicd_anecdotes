@@ -1,0 +1,19 @@
+name: Periodic Health Check
+
+on:
+  push:
+    branches:
+      -master
+  
+  #schedule:
+    # - cron: '0 0 * * *'
+    # uncomment this block to activate this periodic check
+
+jobs:
+  health_check:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Ping /health
+        uses: jtalk/url-health-check-action@v2
+        with:
+          url: https://anecdotes.fly.dev/periodic
