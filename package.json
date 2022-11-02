@@ -1,4 +1,7 @@
 {
+  "engines" : {
+    "node" : "14.15.0"
+  },
   "name": "redux-anecdotes",
   "version": "0.1.0",
   "private": true,
