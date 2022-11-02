@@ -2,7 +2,7 @@ import anecdoteService from '../services/anecdotes'
 const AnecdoteReducer = (state = [], action) => {
 
   // eslint-disable-next-line no-console
-  console.log('state now: ', state)
+  console.log('state is now: ', state)
   // eslint-disable-next-line no-console
   console.log('action', action)
   switch(action.type){
