@@ -37,12 +37,12 @@ jobs:
       - name: test success
         if: success()
         run: |
-          echo "Everything succeeded so far"
+          echo "Everything succeeded"
       - name: test failure
         if: failure()
         run: |
           echo "Something failed"
-  
+  #success and failure parts could use a webhook, but not implemented this time
   tag_release:
     needs: [simple_deployment_pipeline]
     runs-on: ubuntu-20.04
