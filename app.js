@@ -19,4 +19,8 @@ app.get('/health', (req, res) => {
     res.send('ok')
 })
 
+app.get('/periodic', (req, res) => {
+    res.send('ok')
+})
+
 app.use(express.static('build'))
